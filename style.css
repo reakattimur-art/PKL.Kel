@@ -1,0 +1,609 @@
+/* Reset dan base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header styles */
+header {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 30px;
+    backdrop-filter: blur(10px);
+}
+
+header h1 {
+    color: #2c3e50;
+    font-size: 2.2em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header p {
+    color: #7f8c8d;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+/* Form container */
+.form-container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    backdrop-filter: blur(10px);
+}
+
+.form-container h2 {
+    color: #2c3e50;
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 1.8em;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 10px;
+}
+
+/* Form groups */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 1.1em;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e1e8ed;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    background: #fff;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+    transform: translateY(-2px);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* Pegawai info */
+.pegawai-info {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    border-left: 4px solid #3498db;
+}
+
+.pegawai-info h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.info-grid div {
+    background: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.info-grid strong {
+    color: #2c3e50;
+}
+
+/* Button styles */
+.button-group {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.btn {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, #95a5a6, #7f8c8d);
+    color: white;
+    box-shadow: 0 4px 15px rgba(149, 165, 166, 0.3);
+}
+
+.btn-secondary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(149, 165, 166, 0.4);
+}
+
+.btn-print {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: white;
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+}
+
+.btn-print:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+}
+
+/* Output container */
+.output-container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    backdrop-filter: blur(10px);
+}
+
+.output-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #3498db;
+}
+
+.output-header h2 {
+    color: #2c3e50;
+    font-size: 1.8em;
+}
+
+/* Surat content */
+.surat-content {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    font-family: 'Times New Roman', serif;
+    line-height: 1.8;
+    min-height: 800px;
+}
+
+.surat-tugas {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 0;
+    box-shadow: none;
+}
+
+.header-surat {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+}
+
+.header-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.logo-section {
+    flex-shrink: 0;
+}
+
+.logo-placeholder {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #e1e8ed;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.logo-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 6px;
+}
+
+.header-text {
+    flex: 1;
+    text-align: center;
+}
+
+.header-text h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.header-text h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.header-text p {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #555;
+    font-weight: 500;
+}
+
+.header-line {
+    height: 3px;
+    background: linear-gradient(90deg, #2c3e50 0%, #3498db 50%, #2c3e50 100%);
+    border-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.judul-surat {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.judul-surat h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.isi-surat {
+    margin: 30px 0;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.paragraf-pembuka {
+    margin: 20px 0;
+    text-align: justify;
+}
+
+.paragraf-pembuka p {
+    margin: 0;
+    font-size: 14px;
+    text-indent: 0;
+}
+
+.data-pegawai {
+    margin: 25px 0;
+    padding: 0;
+}
+
+.table-pegawai {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+
+.table-pegawai tr {
+    border-bottom: 1px solid #e1e8ed;
+}
+
+.table-pegawai td {
+    padding: 8px 0;
+    vertical-align: top;
+}
+
+.table-pegawai .label {
+    width: 120px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.table-pegawai .separator {
+    width: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.table-pegawai .value {
+    color: #333;
+    font-weight: 500;
+}
+
+.tugas-detail {
+    margin: 25px 0;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+}
+
+.tugas-detail p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.paragraf-penutup {
+    margin: 30px 0;
+    text-align: justify;
+}
+
+.paragraf-penutup p {
+    margin: 0;
+    font-size: 14px;
+    text-indent: 0;
+}
+
+.ttd-section {
+    margin-top: 60px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.ttd-content {
+    text-align: center;
+    min-width: 300px;
+}
+
+.ttd-title {
+    font-weight: bold;
+    font-size: 14px;
+    margin: 0 0 5px 0;
+    color: #2c3e50;
+}
+
+.ttd-subtitle {
+    font-size: 12px;
+    margin: 0 0 20px 0;
+    color: #555;
+}
+
+.ttd-space {
+    height: 60px;
+    border-bottom: 1px solid #333;
+    margin-bottom: 10px;
+}
+
+.ttd-nama {
+    font-weight: bold;
+    font-size: 14px;
+    margin: 5px 0;
+    color: #2c3e50;
+}
+
+.ttd-nip {
+    font-size: 12px;
+    margin: 5px 0;
+    color: #555;
+}
+
+.ttd-pangkat {
+    font-size: 12px;
+    margin: 5px 0;
+    color: #555;
+}
+
+.ttd-tanggal {
+    font-size: 12px;
+    margin: 5px 0;
+    color: #555;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .button-group {
+        flex-direction: column;
+    }
+    
+    .output-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .surat-content {
+        padding: 20px;
+    }
+    
+    header h1 {
+        font-size: 1.8em;
+    }
+    
+    .form-container h2 {
+        font-size: 1.5em;
+    }
+    
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .logo-placeholder {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .table-pegawai .label {
+        width: 100px;
+    }
+    
+    .ttd-content {
+        min-width: 250px;
+    }
+    
+    .ttd-section {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .surat-content {
+        padding: 15px;
+    }
+    
+    .header-surat h2 {
+        font-size: 16px;
+    }
+    
+    .judul-surat h2 {
+        font-size: 16px;
+    }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-container,
+.output-container {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Print styles */
+@media print {
+    body {
+        background: white;
+    }
+    
+    .container {
+        max-width: none;
+        padding: 0;
+    }
+    
+    .form-container {
+        display: none;
+    }
+    
+    .output-container {
+        box-shadow: none;
+        background: white;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .output-header {
+        display: none;
+    }
+    
+    .surat-content {
+        box-shadow: none;
+        padding: 20px;
+        min-height: auto;
+    }
+    
+    .header-content {
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .logo-placeholder {
+        border: 2px solid #333 !important;
+        background: white !important;
+    }
+    
+    .logo-image {
+        filter: grayscale(100%);
+    }
+    
+    .header-line {
+        background: #333 !important;
+        height: 2px !important;
+    }
+    
+    .table-pegawai tr {
+        border-bottom: 1px solid #333 !important;
+    }
+    
+    .ttd-space {
+        border-bottom: 1px solid #333 !important;
+    }
+    
+    .tugas-detail {
+        background: #f5f5f5 !important;
+        border-left: 3px solid #333 !important;
+    }
+}

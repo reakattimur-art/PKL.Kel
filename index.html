@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator Surat Tugas Perjalanan Dinas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>GENERATOR SURAT TUGAS PERJALANAN DINAS</h1>
+            <p>Dinas Komunikasi dan Informatika - Kabupaten Sumba Barat Daya</p>
+            <nav>
+                <a href="recap.html" class="nav-link">📊 Rekap Data Perjalanan</a>
+            </nav>
+        </header>
+
+        <div class="form-container">
+            <h2>Form Input Data Perjalanan Dinas</h2>
+            
+            <form id="suratForm">
+                <div class="form-group">
+                    <label for="pegawai">Pilih Pegawai:</label>
+                    <select id="pegawai" required>
+                        <option value="">-- Pilih Pegawai --</option>
+                    </select>
+                </div>
+
+                <div class="pegawai-info" id="pegawaiInfo" style="display: none;">
+                    <h3>Informasi Pegawai:</h3>
+                    <div class="info-grid">
+                        <div><strong>NIP:</strong> <span id="infoNip"></span></div>
+                        <div><strong>Golongan:</strong> <span id="infoGol"></span></div>
+                        <div><strong>Jabatan:</strong> <span id="infoJabatan"></span></div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="selama">Selama (Hari):</label>
+                    <input type="number" id="selama" min="1" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="dariTanggal">Dari Tanggal:</label>
+                        <input type="date" id="dariTanggal" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sampaiTanggal">Sampai Tanggal:</label>
+                        <input type="date" id="sampaiTanggal" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="nomorSurat">Nomor Surat:</label>
+                    <input type="text" id="nomorSurat" placeholder="Contoh: 800/001/452.321.44/2024" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="maksud">Maksud Perjalanan Dinas:</label>
+                    <textarea id="maksud" rows="3" placeholder="Contoh: monitoring, rapat koordinasi, dll" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="tujuan">Tujuan Perjalanan Dinas:</label>
+                    <input type="text" id="tujuan" placeholder="Contoh: KUPANG, JAKARTA, dll" required>
+                </div>
+
+                <div class="button-group">
+                    <button type="submit" class="btn btn-primary">Generate Surat Tugas</button>
+                    <button type="button" class="btn btn-secondary" onclick="resetForm()">Reset Form</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="output-container" id="outputContainer" style="display: none;">
+            <div class="output-header">
+                <h2>Surat Tugas Perjalanan Dinas</h2>
+                <button class="btn btn-print" onclick="printSurat()">🖨️ Cetak Surat</button>
+            </div>
+            <div id="suratOutput" class="surat-content"></div>
+        </div>
+    </div>
+
+    <script src="database.js"></script>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
